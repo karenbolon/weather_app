@@ -47,7 +47,7 @@ def get_weather_data():
 
         for r in recipients:
             message = client.messages.create(
-                from_=twilio_num,
+                from_='whatsapp:+14155238886',
                 body="It's going to rain today. Remember to bring an umbrella",
                 to = r
                 )
