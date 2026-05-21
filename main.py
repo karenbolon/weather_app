@@ -7,7 +7,7 @@ account_sid = os.getenv("ACCOUNT_SID")
 auth_token = os.getenv("AUTH_TOKEN")
 kay = os.getenv("KAY")
 miks = os.getenv("MIKS")
-twilio_num = os.getenv("TWILIO")
+twilio_num = os.getenv("MAIN")
 
 print("API_KEY loaded?", bool(api_key))
 print("ACCOUNT_SID loaded?", bool(account_sid))
@@ -47,7 +47,7 @@ def get_weather_data():
 
         for r in recipients:
             message = client.messages.create(
-                from_='whatsapp:+14155238886',
+                from_=twilio_num,
                 body="It's going to rain today. Remember to bring an umbrella",
                 to = r
                 )

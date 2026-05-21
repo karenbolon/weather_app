@@ -30,4 +30,5 @@ jobs:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           KAY: ${{ secrets.KAY }}
           MIKS: ${{ secrets.MIKS }}
+          MAIN: $${{ secrets.MAIN }}
         run: python main.py
